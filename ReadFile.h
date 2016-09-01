@@ -2,7 +2,7 @@
 #define READ_FILE
 
 #include "Text.h"
-
+// new comment 
 #include <fstream>
 using namespace std;
 
