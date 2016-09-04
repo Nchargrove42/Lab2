@@ -13,15 +13,6 @@ ReadFile* createReadFile(const char* file_name)
    return rf;
 }
 
-void close(ReadFile* rf)
-{
-   if (!rf->closed)
-   {
-      rf->input_file.close();
-      rf->closed = true;
-   }
-}
-
 void destroyReadFile(ReadFile* rf)
 {
    close(rf);
@@ -31,6 +22,15 @@ void destroyReadFile(ReadFile* rf)
 bool eof(ReadFile* rf)
 {
    return rf->_eof;
+}
+
+void close(ReadFile* rf)
+{
+   if (!rf->closed)
+   {
+      rf->input_file.close();
+      rf->closed = true;
+   }
 }
 
 String* readLine(ReadFile* rf)
