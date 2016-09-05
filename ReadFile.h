@@ -6,6 +6,7 @@
 #include <fstream>
 using namespace std;
 
+//Changed struct to class
 class ReadFile
 {
 	public:
