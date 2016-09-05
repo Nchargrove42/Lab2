@@ -5,7 +5,7 @@
 
 #include <fstream>
 using namespace std;
-
+/*
 struct WriteFile
 {
    ofstream output_file;
@@ -15,6 +15,17 @@ struct WriteFile
 WriteFile* createWriteFile(const char* file_name);
 void destroyWriteFile(WriteFile* wf);
 void writeLine(WriteFile* wf, String* line);
-void close(WriteFile* wf);
+void close(WriteFile* wf); */
 
+class WriteFile
+{
+	private: 
+		ofstream output_file;
+		bool closed; 
+		
+	public: 
+		WriteFile(const char* file_name);
+		~WriteFile();
+		
+};
 #endif
